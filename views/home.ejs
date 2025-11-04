@@ -14,9 +14,15 @@
     </h2>
     <h3>
         Occupation:
-        <%=person.occupation%>
+        <%=person.occupation %>
 
     </h3>
+
+    <% if(person.occupation === 'Plumber') { %>
+        <p>You work with pipes!</p>
+        <%}else{%>
+            <p>That is an interesting job!</p>
+            <% } %>
 
 </body>
 
