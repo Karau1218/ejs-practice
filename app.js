@@ -16,12 +16,9 @@ app.use(express.static('public'))
 
 // Define a "default" route, 
 // e.g. jshmo.greenriverdev.com/reservation-app/
+// Define a default "route" ('/)
 app.get('/', (req, res) => {
-    // Log message to the server's console
-    console.log("Hello, world - server!")
-
-    // Return home page
-    res.render('home')
+    res.render('home', { name: 'Donald Duck' })
 })
 
 // Define a "confirm" route, using the POST method
@@ -39,7 +36,3 @@ app.listen(PORT, () => {
     console.log(`Server running on port http://localhost:${PORT}`)
 })
 
-// Define a default "route" ('/)
-app.get('/', (req, res) => {
-    res.render('home', { name: 'Donald Duck' })
-})
