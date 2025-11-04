@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
     res.render('home', { person })
 })
 
+// Define a default "route friends" ('/)
+app.get('/friends', (req, res) => {
+    const friends = ['MIckey', 'Goofy', 'Minnie', 'Dasiy'];
+    res.render('friends', { friends});
+})
+
 // Define a "confirm" route, using the POST method
 app.post('/confirm', (req, res) => {
     // Get the data from the form that was submitted
