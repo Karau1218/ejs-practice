@@ -8,22 +8,39 @@
 </head>
 
 <body>
+        <!-- include Partials -->
+             <%- include ('partials/header')%>
+             <main>
+                <h2>Welcome!</h2>
     <h1>EJS Practice</h1>
     <h2>Hello,
         <%=person.name%>
     </h2>
     <h3>
         Occupation:
-        <%=person.occupation %>
+        <%=person.occupation %><br>
+       
 
     </h3>
 
-    <% if(person.occupation === 'Plumber') { %>
+    <% if(person.occupation === 'plumber') { %>
         <p>You work with pipes!</p>
         <%}else{%>
             <p>That is an interesting job!</p>
             <% } %>
+<h3>
+     Favoritecolor:
+        <%=person.favirtcolor %>
+</h3>
 
+    <% if(person.favirtcolor === 'blue') { %>
+        <p>Blue like the sky!</p>
+        <%}else{%>
+            <p>have a nice day!</p>
+            <% } %>
+        
+             </main>
+              <%- include ('partials/footer')%>
 </body>
 
 </html>

@@ -17,15 +17,18 @@ app.use(express.static('public'))
 // Define a "default" route, 
 // e.g. jshmo.greenriverdev.com/reservation-app/
 // Define a default "route" ('/)
+
+
 app.get('/', (req, res) => {
-    const person = { name: 'Donald Duck', occupation: 'plumber' }
+    const person = { name: 'Donald Duck', occupation: 'plumber', favirtcolor: 'blue'}
     res.render('home', { person })
 })
 
 // Define a default "route friends" ('/)
 app.get('/friends', (req, res) => {
     const friends = ['MIckey', 'Goofy', 'Minnie', 'Dasiy'];
-    res.render('friends', { friends});
+    const movies = ['Titanic', 'Bad boys', 'Moana', 'The God Father'];
+    res.render('friends', { friends, movies});
 })
 
 // Define a "confirm" route, using the POST method
