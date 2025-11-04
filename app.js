@@ -18,7 +18,7 @@ app.use(express.static('public'))
 // e.g. jshmo.greenriverdev.com/reservation-app/
 // Define a default "route" ('/)
 app.get('/', (req, res) => {
-    res.render('home', { name: 'Donald Duck', occupation: 'plumber' })
+    const person = { name: 'Donald Duck', occupation: 'plumber' }
     res.render('home', { person })
 })
 
